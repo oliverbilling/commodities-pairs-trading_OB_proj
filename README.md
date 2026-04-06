@@ -16,14 +16,16 @@ Pairs trading strategy across 18 commodity futures. Screens for mean-reverting p
 
 ---
 
-## Results (3-year backtest, GC/SI)
+## Results (3-year backtest, $10,000 notional per leg)
 
-| Period | Trades | Win Rate | Sharpe | $ P&L ($10k/leg) |
-|---|---|---|---|---|
-| In-sample | 9 | 67% | 0.20 | $520 |
-| Out-of-sample | 2 | 50% | 0.21 | $120 |
+| Pair | Period | Trades | Win Rate | Sharpe | $ P&L |
+|---|---|---|---|---|---|
+| Brent / WTI (BZ/CL) | In-sample | 7 | 71% | 0.82 | $736 |
+| Brent / WTI (BZ/CL) | Out-of-sample | 2 | 100% | 1.20 | $502 |
+| Gold / Silver (GC/SI) | In-sample | 9 | 67% | 0.20 | $520 |
+| Gold / Silver (GC/SI) | Out-of-sample | 2 | 50% | 0.21 | $120 |
 
-Sharpe is consistent in and out of sample with zero stops triggered, which is the key signal that the strategy generalises rather than overfits.
+Both pairs show consistent Sharpe in and out of sample with zero stops triggered. BZ/CL out-of-sample Sharpe of 1.20 exceeds in-sample, and GC/SI is stable at ~0.20 across both periods — the key signal that neither pair is overfitting.
 
 ---
 
